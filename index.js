@@ -5,7 +5,7 @@ const transform = function(existingConfig, pluggableConfig) {
       pluggableConfig.ignore = [pluggableConfig.ignore];
     }
   }
-  const ignoreCount = pluggableConfig.ignore.length;
+  const ignoreCount = pluggable.ignore ? pluggableConfig.ignore.length : 0;
   for (let i = 0; i < ignoreCount; i++) {
     newConfig.plugins.push(
       new webpack.IgnorePlugin(
