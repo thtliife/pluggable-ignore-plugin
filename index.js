@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 const transform = function(existingConfig, pluggableConfig) {
   const newConfig = existingConfig;
   if (pluggableConfig.ignore) {
